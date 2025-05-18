@@ -16,14 +16,14 @@ export class DetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getPokemon;
+    this.getPokemon();
   }
 
   pokemon: any;
   isLoading: boolean = false;
   error: boolean = false;
 
-  get getPokemon() {
+  getPokemon() {
     const id = this.activitedRouter.snapshot.params['id'];
     const url = 'https://pokeapi.co/api/v2/pokemon';
     const urlName = 'https://pokeapi.co/api/v2/pokemon-species';
